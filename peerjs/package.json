@@ -1,0 +1,23 @@
+{
+  "name": "SynsSpace",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Hossam",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "nodemon .",
+    "dev": "concurrently --kill-others \"yarn watch\" \"yarn start\""
+  },
+  "dependencies": {
+    "peer": "^0.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "tslint": "^6.1.3",
+    "typescript": "^5.5.4"
+  }
+}
