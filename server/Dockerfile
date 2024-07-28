@@ -2,12 +2,13 @@ FROM node:18-alpine
 WORKDIR /ws
 
 COPY package.json ./
+COPY yarn.lock ./
 
-RUN npm install --frozen-lockfile 
+RUN yarn install --frozen-lockfile 
 
 COPY . .
 
-RUN npm run build
+RUN yarn build
 
 CMD ["node", "."]
 
