@@ -10,7 +10,7 @@
     "watch": "tsc -w",
     "prestart": "npm run build",
     "start": "nodemon .",
-    "dev": "concurrently --kill-others \"yarn watch\" \"yarn start\""
+    "dev": "concurrently --kill-others \"npm watch\" \"npm start\""
   },
   "dependencies": {
     "peer": "^0.6.1"

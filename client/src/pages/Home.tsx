@@ -1,9 +1,11 @@
-import { Join } from "../components/Join";
+import { Join } from '../components/Join'; 
 
 export const Home = () => {
-    return (
-        <div className="App flex items-center justify-center w-screen h-screen">
-            <Join />
-        </div>
-    );
+  return (
+    <div className='flex flex-col items-center justify-center w-screen h-screen bg-gray-100'>
+      <div className='bg-white p-6 rounded-lg shadow-md'>
+        <Join />
+      </div>
+    </div>
+  );
 };

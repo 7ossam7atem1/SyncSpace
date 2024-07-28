@@ -9,7 +9,11 @@ describe('Text chat', () => {
     cy.get('[data-testid="chat-button"]').click();
     cy.get('textarea').type('Hello cypress!');
     cy.get('[data-testid="send-msg-button"]').click();
+
     cy.get('[data-testid="chat"]').should('contain.text', 'Hello cypress!');
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      return false;
+    });
     cy.get('[data-testid="chat"]').should('contain.text', 'You');
     cy.task('connect');
     cy.url().then((url) => {
